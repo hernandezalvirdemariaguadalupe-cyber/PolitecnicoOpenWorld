@@ -5,7 +5,7 @@
 ## Equipo
 | Integrante | Usuario de GitHub | PR |
 |---|---|---|
-| Lupita Alvirde | @<usuario> | gabrielhuav/PolitecnicoOpenWorld#<NUM_PR> |
+| Lupita Alvirde | @<usuario> | gabrielhuav/PolitecnicoOpenWorld#164 |
 | <integrante 2> | @<usuario> | <PR> |
 
 ## Objetivo y alcance
