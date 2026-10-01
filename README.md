@@ -5,7 +5,7 @@
 ## Equipo
 | Integrante | Usuario de GitHub | PR |
 |---|---|---|
-| Lupita Alvirde | @<usuario> | gabrielhuav/PolitecnicoOpenWorld#<NUM_PR> |
+| Lupita Alvirde | @<usuario> | gabrielhuav/PolitecnicoOpenWorld#164 |
 | <integrante 2> | @<usuario> | <PR> |
 
 ## Objetivo y alcance
@@ -16,7 +16,7 @@ Agregar al modo **Titulación por Combate** un peleador nuevo, **"Estudiante IPN
 | Concepto | Valor |
 |---|---|
 | Issue | gabrielhuav/PolitecnicoOpenWorld#163 |
-| Pull Request | gabrielhuav/PolitecnicoOpenWorld#<NUM_PR> |
+| Pull Request | gabrielhuav/PolitecnicoOpenWorld#164 |
 | Rama | `feature/sf-estudiante-ipn-fighter` |
 | SHA base | `7ed325393f82872c2be94ff2ada46948efa19152` |
 | SHA final entregado | `1cb007d5<completo>` |
