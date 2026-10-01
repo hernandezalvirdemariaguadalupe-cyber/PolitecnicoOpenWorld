@@ -42,7 +42,7 @@ Agregar al modo **Titulación por Combate** un peleador nuevo, **"Estudiante IPN
 
 ## Revisión técnica
 - **Revisión recibida de:** Aragón Martínez Manuel Alejandro ([@ManuelAAM](https://github.com/ManuelAAM)) — [Comentario de Aprobación en PR #164](https://github.com/gabrielhuav/PolitecnicoOpenWorld/pull/164)
-- **Revisión hecha por mí al PR de:** Aragón Martínez Manuel Alejandro ([@ManuelAAM](https://github.com/ManuelAAM)) — [Comentario de Aprobación en PR #174](https://github.com/gabrielhuav/PolitecnicoOpenWorld/pull/174)
+- **Revisión hecha por mí al PR de:** Aragón Martínez Manuel Alejandro ([@ManuelAAM](https://github.com/ManuelAAM)) — [Comentario de Aprobación en PR #174](https://github.com/gabrielhuav/PolitecnicoOpenWorld/pull/174#pullrequestreview-538538443)
 
 ### Evidencia de Validación Local por Revisor (@ManuelAAM)
 - **Dispositivo de prueba:** Samsung Galaxy A54 5G (SM-A546E, Android 14) / AVD API 36.
