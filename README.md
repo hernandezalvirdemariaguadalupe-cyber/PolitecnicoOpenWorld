@@ -6,7 +6,7 @@
 | Integrante | Usuario de GitHub | PR |
 |---|---|---|
 | Lupita Alvirde | @hernandezalvirdemariaguadalupe-cyber | gabrielhuav/PolitecnicoOpenWorld#164 |
-| <integrante 2> | @<usuario> | <PR> |
+| Aragón Martínez Manuel Alejandro | @ManuelAAM | gabrielhuav/PolitecnicoOpenWorld#174 |
 
 ## Objetivo y alcance
 Agregar al modo **Titulación por Combate** un peleador nuevo, **"Estudiante IPN"**, reutilizando los sprites existentes del NPC de interiores `Ipn3`, seleccionable solo con Developer Mode.
@@ -41,8 +41,16 @@ Agregar al modo **Titulación por Combate** un peleador nuevo, **"Estudiante IPN
 **Qué queda fuera:** CI usa `MAPS_API_KEY` vacío y no tiene `google-services.json` (mapas y Firebase no se prueban); no ejecuta la app ni pruebas de UI, por eso se hizo QA manual.
 
 ## Revisión técnica
-- Revisión recibida de: <compañero> — <liga al comentario>
-- Revisión hecha por mí al PR de: <compañero> — <liga al comentario>
+- **Revisión recibida de:** Aragón Martínez Manuel Alejandro ([@ManuelAAM](https://github.com/ManuelAAM)) — [Comentario de Aprobación en PR #164](https://github.com/gabrielhuav/PolitecnicoOpenWorld/pull/164)
+- **Revisión hecha por mí al PR de:** Aragón Martínez Manuel Alejandro ([@ManuelAAM](https://github.com/ManuelAAM)) — [Comentario de Aprobación en PR #174](https://github.com/gabrielhuav/PolitecnicoOpenWorld/pull/174)
+
+### Evidencia de Validación Local por Revisor (@ManuelAAM)
+- **Dispositivo de prueba:** Samsung Galaxy A54 5G (SM-A546E, Android 14) / AVD API 36.
+- **Casos verificados:** C01 (Ruta Feliz en selector y combate en ESCOM), C02 (Condición límite con Developer Mode OFF), y D1 (Escala y proporciones correctas de sprite compartido en `SfSceneRenderer.kt`).
+
+| Selector con Developer Mode ON | Pelea en ESCOM (Sprites Proporcionales) |
+|:---:|:---:|
+| <img src="evidencias/peer_review_estudiante_ipn_selector.png" width="360" alt="Selector Estudiante IPN en Galaxy A54"> | <img src="evidencias/peer_review_estudiante_ipn_combate.png" width="360" alt="Combate Estudiante IPN en Galaxy A54"> |
 
 ## Conclusiones
 Se agregó el peleador "Estudiante IPN" reutilizando sprites existentes, solo con Developer Mode. Durante el QA se encontró el defecto D1 (los peleadores compartidos se dibujaban gigantes en gama baja), preexistente en el renderer; se corrigió en un commit aparte con prueba de regresión y se volvió a probar. Los casos C01–C06 se aprobaron y las pruebas unitarias pasan 132/132. Recomiendo integrar el cambio; quedan como riesgos las poses alpha aproximadas, la falta de validación con TalkBack y el CI pendiente de aprobación.
