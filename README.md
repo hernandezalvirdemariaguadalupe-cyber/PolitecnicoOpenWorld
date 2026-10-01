@@ -5,7 +5,7 @@
 ## Equipo
 | Integrante | Usuario de GitHub | PR |
 |---|---|---|
-| Lupita Alvirde | @<usuario> | gabrielhuav/PolitecnicoOpenWorld#164 |
+| Lupita Alvirde | @hernandezalvirdemariaguadalupe-cyber | gabrielhuav/PolitecnicoOpenWorld#164 |
 | <integrante 2> | @<usuario> | <PR> |
 
 ## Objetivo y alcance
@@ -19,7 +19,7 @@ Agregar al modo **Titulación por Combate** un peleador nuevo, **"Estudiante IPN
 | Pull Request | gabrielhuav/PolitecnicoOpenWorld#164 |
 | Rama | `feature/sf-estudiante-ipn-fighter` |
 | SHA base | `7ed325393f82872c2be94ff2ada46948efa19152` |
-| SHA final entregado | `1cb007d5<completo>` |
+| SHA final entregado | `5e3504d1` (completo: `git rev-parse HEAD`) |
 
 ## Matriz de pruebas y evidencias
 - [Plan, riesgos, casos y hallazgos](docs/pruebas.md)
@@ -28,8 +28,14 @@ Agregar al modo **Titulación por Combate** un peleador nuevo, **"Estudiante IPN
 ## Checks (CI)
 | Check | Estado | SHA / ejecución | Registro |
 |---|---|---|---|
-| PR Quality Gate — unit-tests | <✅/❌/bloqueado> | `1cb007d5` | <liga> |
-| PR Quality Gate — detekt | <✅/❌/bloqueado> | `1cb007d5` | <liga> |
+| PR Quality Gate (run #154: unit-tests + detekt) | ⚠️ Bloqueado — *Action required*: esperando aprobación del mantenedor ("Workflow runs completed with no jobs") | `5e3504d1` | [Actions](https://github.com/gabrielhuav/PolitecnicoOpenWorld/actions?query=branch%3Afeature%2Fsf-estudiante-ipn-fighter) |
+
+<img src="evidencias/ci_checks.png" alt="CI: Action required" width="700">
+
+**Bloqueo externo:** GitHub retiene los workflows de PR desde forks de colaboradores nuevos hasta que el mantenedor los aprueba. No se desactivó ni modificó ningún check.
+**Validación local equivalente:** `:app:testDebugUnitTest` → 132/132 en `5e3504d1` y `:shared:testAndroidHostTest` en verde (Android Studio). 
+
+<img src="evidencias/pruebas.png" alt="Pruebas unitarias 132/132" width="700">
 
 **Qué comprueban:** build debug de Android, pruebas unitarias de `app` y `shared`, nombres de prueba compatibles con Kotlin/Native y análisis estático con detekt.
 **Qué queda fuera:** CI usa `MAPS_API_KEY` vacío y no tiene `google-services.json` (mapas y Firebase no se prueban); no ejecuta la app ni pruebas de UI, por eso se hizo QA manual.
@@ -39,7 +45,7 @@ Agregar al modo **Titulación por Combate** un peleador nuevo, **"Estudiante IPN
 - Revisión hecha por mí al PR de: <compañero> — <liga al comentario>
 
 ## Conclusiones
-<2-4 líneas: qué se logró, el defecto D1 encontrado y corregido, recomendación final>
+Se agregó el peleador "Estudiante IPN" reutilizando sprites existentes, solo con Developer Mode. Durante el QA se encontró el defecto D1 (los peleadores compartidos se dibujaban gigantes en gama baja), preexistente en el renderer; se corrigió en un commit aparte con prueba de regresión y se volvió a probar. Los casos C01–C06 se aprobaron y las pruebas unitarias pasan 132/132. Recomiendo integrar el cambio; quedan como riesgos las poses alpha aproximadas, la falta de validación con TalkBack y el CI pendiente de aprobación.
 
 ## Bitácora
 - [Bitácora de Lupita Alvirde](docs/bitacora-lupita.md)
