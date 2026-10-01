@@ -37,7 +37,20 @@
 - **Esperado:** aparece en el selector; la pelea inicia en ESCOM; sprites a tamaño normal.
 - **Real:** Aparece en el selector; la pelea inicia en ESCOM; camina, salta y ataca con normalidad y del mismo tamaño que el rival.
 - **Estado:** Aprobado
-- **Evidencia:** [selector](../evidencias/despues_selector.png) · [inicio](../evidencias/pelea_inicio.png) · [ataque](../evidencias/despues_ataque.png)
+- **Evidencia:**
+
+  **selector**
+
+  <img src="../evidencias/despues_selector.png" alt="selector" width="600">
+
+  **inicio**
+
+  <img src="../evidencias/pelea_inicio.png" alt="inicio" width="600">
+
+  **ataque**
+
+  <img src="../evidencias/despues_ataque.png" alt="ataque" width="600">
+
 - **Defecto / decisión:** En `1cb007d5` se observó D1; tras `5e3504d1` se repitió el caso y el personaje se ve a tamaño normal. Decisión: aprobado.
 
 ### C02 — Condición alterna/límite: Developer Mode OFF (CA2, R3)
@@ -45,7 +58,20 @@
 - **Pasos:** 1) Ajustes → Developer Mode OFF. 2) Abrir selector de Titulación por Combate.
 - **Esperado:** "Estudiante IPN" no aparece, ni con candado.
 - **Real:** Con Developer Mode apagado, "Estudiante IPN" no aparece en el selector, tampoco con candado. · **Estado:** Aprobado
-- **Evidencia:** [ajuste apagado](../evidencias/no_developer_mode.png) · [selector sin el personaje](../evidencias/sin_devmod.png) · [selector sin el personaje 2](../evidencias/sin_devmod2.png)
+- **Evidencia:**
+
+  **ajuste apagado**
+
+  <img src="../evidencias/no_developer_mode.png" alt="ajuste apagado" width="600">
+
+  **selector sin el personaje**
+
+  <img src="../evidencias/sin_devmod.png" alt="selector sin el personaje" width="600">
+
+  **selector sin el personaje 2**
+
+  <img src="../evidencias/sin_devmod2.png" alt="selector sin el personaje 2" width="600">
+
 
 ### C03 — Regresión: otro peleador y pruebas unitarias (CA3, R2)
 - **Autor / fecha:** Lupita Alvirde / 2026-10-01 · **SHA:** `5e3504d1` · **Dispositivo:** Pixel 8 API 34
@@ -53,14 +79,36 @@
 - **Esperado:** la pelea funciona igual que en `7ed32539`; todas las pruebas pasan.
 - **Real:** pruebas 132/132 aprobadas (129 previas + 3 nuevas); pelea con otro peleador idéntica a la versión base.
 - **Estado:** Aprobado
-- **Evidencia:** [otro personaje](../evidencias/otro_personaje.png) · [pruebas app](../evidencias/pruebas.png) · [pruebas Estudiante IPN](../evidencias/pruebas_estudiante.png) · [pruebas shared](../evidencias/pruebas_shared.png)
+- **Evidencia:**
+
+  **otro personaje**
+
+  <img src="../evidencias/otro_personaje.png" alt="otro personaje" width="600">
+
+  **pruebas app**
+
+  <img src="../evidencias/pruebas.png" alt="pruebas app" width="600">
+
+  **pruebas Estudiante IPN**
+
+  <img src="../evidencias/pruebas_estudiante.png" alt="pruebas Estudiante IPN" width="600">
+
+  **pruebas shared**
+
+  <img src="../evidencias/pruebas_shared.png" alt="pruebas shared" width="600">
+
 
 ### C04 — Navegación y estado (R4)
 - **Autor / fecha:** Lupita Alvirde / 2026-10-01 · **SHA:** `5e3504d1` · **Dispositivo:** Pixel 8 API 34
 - **Pasos:** 1) Iniciar pelea con Estudiante IPN. 2) Botón Home, esperar 5 s, volver a la app. 3) Presionar Atrás / ✕ para salir al menú. 4) Volver a entrar y elegirlo de nuevo.
 - **Esperado:** el personaje se sigue viendo correctamente; salir y volver no deja la pantalla vacía ni cierra la app. (La orientación es fija en horizontal: se registra como tal.)
 - **Real:** Tras Home y regreso el personaje se sigue viendo correctamente; Atrás/✕ regresa al menú; al volver a entrar y elegirlo funciona sin problema. · **Estado:** Aprobado
-- **Evidencia:** [navegación](../evidencias/nav_atras_regreso.png)
+- **Evidencia:**
+
+  **navegación**
+
+  <img src="../evidencias/nav_atras_regreso.png" alt="navegación" width="600">
+
 
 ### C05 — Accesibilidad: texto ampliado / TalkBack
 - **Autor / fecha:** Lupita Alvirde / 2026-10-01 · **SHA:** `5e3504d1` · **Dispositivo:** Pixel 8 API 34
@@ -68,7 +116,12 @@
 - **Esperado:** el nombre se lee y no se corta ni se encima.
 - **Real:** Con la fuente al máximo, el nombre "Estudiante IPN" se lee completo en el selector, sin cortarse. · **Estado:** Aprobado (texto ampliado); TalkBack no aplica en este entorno
 - **Limitación:** el emulador no incluye TalkBack (no aparece en Accessibility); no se pudo validar con lector de pantalla. Los botones de pelea solo exponen su letra (observación fuera de alcance).
-- **Evidencia:** [texto grande](../evidencias/a11y_texto_grande.png)
+- **Evidencia:**
+
+  **texto grande**
+
+  <img src="../evidencias/a11y_texto_grande.png" alt="texto grande" width="600">
+
 
 ### C06 — Compatibilidad / entorno: idioma del sistema en español (R1)
 - **Autor / fecha:** Lupita Alvirde / 2026-10-01 · **SHA:** `5e3504d1`
@@ -77,7 +130,16 @@
 - **Esperado:** la interfaz se muestra en español y el personaje funciona igual que en inglés.
 - **Real:** El menú principal se muestra en español (MUNDO LIBRE, MODO HISTORIA, AJUSTES…); el Estudiante IPN se puede elegir y pelea con normalidad. · **Estado:** Aprobado
 - **Nota:** una primera repetición se hizo en el mismo Pixel 8 API 34 (2 GB) y se vio a tamaño normal; como no es una condición distinta, se repite bajo otra condición.
-- **Evidencia:** [compatibilidad](../evidencias/compat_idioma.png) · [pelea en español](../evidencias/compat_idioma_pelea.png)
+- **Evidencia:**
+
+  **compatibilidad**
+
+  <img src="../evidencias/compat_idioma.png" alt="compatibilidad" width="600">
+
+  **pelea en español**
+
+  <img src="../evidencias/compat_idioma_pelea.png" alt="pelea en español" width="600">
+
 
 ### PU — Pruebas unitarias automatizadas
 | Prueba | Qué verifica | Resultado en `5e3504d1` |
@@ -95,7 +157,16 @@
 - **Severidad:** Alta — el personaje no es jugable en dispositivos de gama baja.
 - **Causa:** en gama baja el renderer recorta con `sheetScale = 0.5`, pero las hojas compartidas nunca se submuestrean (`SfSharedSheets.sheetFor`), así que se recortaba un cuarto de la celda.
 - **Estado:** Corregido en `5e3504d1` (`SfSharedSheets.sheetScaleFor`). Preexistente para Lázaro/Granadero/Paramédico (no seleccionables).
-- **Evidencia:** [antes, `1cb007d5`](../evidencias/hallazgo_ipn_gigante.png) → [después, `5e3504d1`](../evidencias/despues_fix_tamano.png)
+- **Evidencia:**
+
+  **antes, `1cb007d5`**
+
+  <img src="../evidencias/hallazgo_ipn_gigante.png" alt="antes 1cb007d5" width="600">
+
+  **después, `5e3504d1`**
+
+  <img src="../evidencias/despues_fix_tamano.png" alt="despues 5e3504d1" width="600">
+
 
 ### D2 — `./gradlew` no ejecuta en un clon limpio (preexistente)
 - **Observado:** `ClassNotFoundException: org.gradle.wrapper.GradleWrapperMain`.

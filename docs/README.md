@@ -28,10 +28,14 @@ Agregar al modo **Titulación por Combate** un peleador nuevo, **"Estudiante IPN
 ## Checks (CI)
 | Check | Estado | SHA / ejecución | Registro |
 |---|---|---|---|
-| PR Quality Gate (run #154: unit-tests + detekt) | ⚠️ Bloqueado — *Action required*: esperando aprobación del mantenedor ("Workflow runs completed with no jobs") | `5e3504d1` | [Actions](https://github.com/gabrielhuav/PolitecnicoOpenWorld/actions?query=branch%3Afeature%2Fsf-estudiante-ipn-fighter) · [captura](evidencias/ci_checks.png) |
+| PR Quality Gate (run #154: unit-tests + detekt) | ⚠️ Bloqueado — *Action required*: esperando aprobación del mantenedor ("Workflow runs completed with no jobs") | `5e3504d1` | [Actions](https://github.com/gabrielhuav/PolitecnicoOpenWorld/actions?query=branch%3Afeature%2Fsf-estudiante-ipn-fighter) |
+
+<img src="evidencias/ci_checks.png" alt="CI: Action required" width="700">
 
 **Bloqueo externo:** GitHub retiene los workflows de PR desde forks de colaboradores nuevos hasta que el mantenedor los aprueba. No se desactivó ni modificó ningún check.
-**Validación local equivalente:** `:app:testDebugUnitTest` → 132/132 en `5e3504d1` y `:shared:testAndroidHostTest` en verde (Android Studio). Ver [pruebas](evidencias/pruebas.png).
+**Validación local equivalente:** `:app:testDebugUnitTest` → 132/132 en `5e3504d1` y `:shared:testAndroidHostTest` en verde (Android Studio). 
+
+<img src="evidencias/pruebas.png" alt="Pruebas unitarias 132/132" width="700">
 
 **Qué comprueban:** build debug de Android, pruebas unitarias de `app` y `shared`, nombres de prueba compatibles con Kotlin/Native y análisis estático con detekt.
 **Qué queda fuera:** CI usa `MAPS_API_KEY` vacío y no tiene `google-services.json` (mapas y Firebase no se prueban); no ejecuta la app ni pruebas de UI, por eso se hizo QA manual.
